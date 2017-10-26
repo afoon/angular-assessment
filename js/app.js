@@ -14,12 +14,13 @@ angular.module('assessment',['ui.router']).config(function ($stateProvider, $url
                 templateUrl: '../views/blog.html'
             })
             .state('product-details', {
-                url: '/product-details',
-                templateUrl: '../views/product-details.html'
+                url: '/product-details/:id',
+                templateUrl: '../views/product-details.html',
+                controller: 'productCtrl'
             })
             .state('shop', {
                 url: '/shops',
-                templateUrl: '../views/shop.html'
+                templateUrl: '../views/shop.html',
             });
     
         $urlRouterProvider
